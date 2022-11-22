@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
@@ -41,15 +42,15 @@
               </li>
               <li class="tm-page-nav-item">
                 <a href="#special" class="tm-page-link">
-                  <i class="fas fa-glass-martini tm-page-link-icon"></i>
-                  <span>Special Items</span>
+                  <i class="fas fa-hamburger tm-page-link-icon"></i>
+                  <span>Food Menu</span>
                 </a>
               </li>
               <li class="tm-page-nav-item">
                 <a href="#contact" class="tm-page-link">
                   <i class=""></i>
                   <i class="fas fa-solid fa-address-card tm-page-link-icon"></i>
-                  <span>Contact Us</span>
+                  <span>Contact Details</span>
                 </a>
               </li>
               <li class="tm-page-nav-item">
@@ -75,7 +76,7 @@
                   <a href="#" class="tm-tab-link" data-id="hot">Hot Coffee</a>
                 </li>
                 <li>
-                  <a href="#" class="tm-tab-link" data-id="juice">Fruit Juice</a>
+                  <a href="#" class="tm-tab-link" data-id="juice">Fruit Shake</a>
                 </li>
               </ul>
             </nav>
@@ -85,38 +86,37 @@
                 <div class="tm-list-item">          
                   <img src="img/iced-americano.png" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Americano<i class="fas fa-solid fa-rupee-sign tm-list-item-price">75</i></h3>
-                    <p class="tm-list-item-description">Our Americano is bold and robust, made with our signature espresso combined with hot water, for coffee aficionados who prefer a bolder cup.</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price food-rate-1">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price food-count-1">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Iced Black Coffee<i class="fas fa-solid fa-rupee-sign tm-list-item-price">55</i></h3>
+                    <p class="tm-list-item-description">This boozy drink is a combination of black coffee, and sugar, topped with a dollop of Ice.</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-1"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-1"></spam>
                   </div>
                 </div>
                 <div class="tm-list-item">          
                   <img src="img/iced-cappuccino.png" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Cappuccino <i class="fas fa-solid fa-rupee-sign tm-list-item-price">55</i></h3>
-                    <p class="tm-list-item-description">A refreshingly warm shot of espresso made with 100% Arabica beans, topped with milk that is steamed to a thick, perfect froth. A classic favourite.</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Cappuccino Cold Coffee<i class="fas fa-solid fa-rupee-sign tm-list-item-price">60</i></h3>
+                    <p class="tm-list-item-description">We are sure nothing can beat the taste of cappuccino cold coffee. Just mix coffee, milk and some vanilla ice cream together to enjoy the taste of cappuccino cold coffee which is extremely delicious</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-2"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-2"></spam>
                   </div>
                 </div>
                 <div class="tm-list-item">          
                   <img src="img/iced-espresso.png" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Espresso<i class="fas fa-solid fa-rupee-sign tm-list-item-price">90</i></h3>
-                    <p class="tm-list-item-description">Iced espresso is espresso served over ice, often with milk. Our smooth signature Espresso Roast over ice boasts rich, robust flavor and caramelly sweetness.
-                    </p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Creamy Iced Coffee<i class="fas fa-solid fa-rupee-sign tm-list-item-price">85</i></h3>
+                    <p class="tm-list-item-description">This variation of cold coffee requires the addition of lots of creams. You can add lots of vanilla ice cream to make it creamier. This cold coffee with ice cream is an absolute treat for dessert lovers.</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-3"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-3"></spam>
                   </div>
                 </div>
                 <div class="tm-list-item">          
                   <img src="img/iced-latte.png" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Latte<i class="fas fa-solid fa-rupee-sign tm-list-item-price">80</i></h3>
-                    <p class="tm-list-item-description">Treat yourself with the smooth and sophisticated Latte, made with our signature McCafé espresso and topped with 100% real milk, steamed and frothed.</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Iced Latte<i class="fas fa-solid fa-rupee-sign tm-list-item-price">70</i></h3>
+                    <p class="tm-list-item-description">You can experiment with flavored syrups like vanilla and pumpkin spice or create a nondairy version by using oat milk. Skilled baristas often swirl the foam into latte art!</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-4"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-4"></spam>
                   </div>
                 </div> 
                                        
@@ -129,10 +129,11 @@
                 <div class="tm-list-item">          
                   <img src="img/hot-americano.png" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Americano<i class="fas fa-solid fa-rupee-sign tm-list-item-price">60</i></h3>
-                    <p class="tm-list-item-description">A lighter variation of a classic hot Espresso, Americano allows you to enjoy the flavorful taste of our rich espresso but at a fraction of the strength. It gives you the right amount of 'kick' needed anytime of the day!</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Hot Black Coffee<i class="fas fa-solid fa-rupee-sign tm-list-item-price">50</i></h3>
+                    <p class="tm-list-item-description">This boozy drink is a combination of black coffee and sugar by adding in hot water. It gives you the right amount of 'kick' needed anytime of the day!
+                    </p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-5"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-5"></spam>
                   </div>
                 </div>
                 <div class="tm-list-item">          
@@ -140,8 +141,8 @@
                   <div class="tm-black-bg tm-list-item-text">
                     <h3 class="tm-list-item-name">Hot Cappuccino<i class="fas fa-solid fa-rupee-sign tm-list-item-price">70</i></h3>
                     <p class="tm-list-item-description">Indulge in a heavenly Italian hot Cappuccino anytime anywhere! Prepared by pouring a dense creamy milk foam over dark Italian Espresso, Cappuccino's silky magic is one of our barista's finest.</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-6"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-6"></spam>
                   </div>
                 </div>
                 <div class="tm-list-item">          
@@ -149,49 +150,67 @@
                   <div class="tm-black-bg tm-list-item-text">
                     <h3 class="tm-list-item-name">Hot Espresso<i class="fas fa-solid fa-rupee-sign tm-list-item-price">75</i></h3>
                     <p class="tm-list-item-description">Beat those morning blues with a cup of our piping hot Espresso. Made from the finest coffee beans, a flavorful brewed to order Espresso using our premium Italian Astoria machines, is just what you need to boost your day in the comfort of your home or office!</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-7"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-7"></spam>
                   </div>
                 </div>
                 <div class="tm-list-item">          
                   <img src="img/hot-latte.png" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Latte<i class="fas fa-solid fa-rupee-sign tm-list-item-price">65</i></h3>
-                    <p class="tm-list-item-description">Enjoy a moment of relaxation with a cup of our delicious Caffè Latte!  A shot of our strong Espresso perfectly balanced with steamed milk, topped with velvety creamy milk foam, Caffè Latte is sure to calm your mind.</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Hot Latte<i class="fas fa-solid fa-rupee-sign tm-list-item-price">75</i></h3>
+                    <p class="tm-list-item-description">Enjoy a moment of relaxation with a cup of our delicious Caffè Latte! A shot of our strong Espresso perfectly balanced with steamed milk, topped with velvety creamy milk foam, Caffè Latte is sure to calm your mind.</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-8"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-8"></spam>
                   </div>
-                </div>        
+                </div>       
               </div>
             </div>
 
             <div id="juice" class="tm-tab-content">
               <div class="tm-list">
                 <div class="tm-list-item">          
-                  <img src="img/smoothie-1.png" alt="Image" class="tm-list-item-img">
+                  <img src="img/Strawberry Shake2.jfif" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Berry Lemonade Splash Regular <i class="fas fa-solid fa-rupee-sign tm-list-item-price">70</i></h3>
-                    <p class="tm-list-item-description">A refreshing drink, made with the flavors of strawberries and blueberries – a definite crowd-pleaser. Now in a new, convenient and delivery friendly packaging.</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Strawberry Shake <i class="fas fa-solid fa-rupee-sign tm-list-item-price">80</i></h3>
+                    <p class="tm-list-item-description">An all time favourite treat bringing together the perfect blend of creamy vanilla soft serve and strawberry flavor.</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-9"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-9"></spam>
                   </div>
                 </div>
                 <div class="tm-list-item">          
-                  <img src="img/smoothie-2.png" alt="Image" class="tm-list-item-img">
+                  <img src="img/Berry Lemonade Splash1.jfif" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Chocolate Shake<i class="fas fa-solid fa-rupee-sign tm-list-item-price">80</i></h3>
-                    <p class="tm-list-item-description">The classic sinful chocolate shake, a treat for anytime you need one. Now in a new, convenient and delivery friendly packaging.</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Berry Lemonade Splash Regular<i class="fas fa-solid fa-rupee-sign tm-list-item-price">70</i></h3>
+                    <p class="tm-list-item-description">A refreshing drink, made with the flavors of strawberries and blueberries – a definite crowd-pleaser.</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-10"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-10"></spam>
                   </div>
                 </div>
                 <div class="tm-list-item">          
-                  <img src="img/smoothie-3.png" alt="Image" class="tm-list-item-img">
+                  <img src="img/Mango Smoothie1.jfif" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Strawberry Shake<i class="fas fa-solid fa-rupee-sign tm-list-item-price">80</i></h3>
-                    <p class="tm-list-item-description">An all time favourite treat bringing together the perfect blend of creamy vanilla soft serve and strawberry flavor.Now in new, convenient and delivery friendly packaging.</p>
-                      <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
+                    <h3 class="tm-list-item-name">Mango Shake<i class="fas fa-solid fa-rupee-sign tm-list-item-price">75</i></h3>
+                    <p class="tm-list-item-description">A delicious mix of mangoes, soft serve mix and blended ice.</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-11"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-11"></spam>
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="img/Green Apple Chiller1.jfif" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Green Apple Chiller<i class="fas fa-solid fa-rupee-sign tm-list-item-price">80</i></h3>
+                    <p class="tm-list-item-description">A perfect blend of aromatic teas, infused with green apple flavour.</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-12"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-12"></spam>
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="img/Green Pear Smoothie2.jfif" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Green Pear Smoothie<i class="fas fa-solid fa-rupee-sign tm-list-item-price">85</i></h3>
+                    <p class="tm-list-item-description">Banana, pear, ginger, and kale come together in one fantastic smoothie that's perfect for fall. It has layers of flavor that make it a anyone will enjoy.</p>
+                    <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-13"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-13"></spam>
                   </div>
                 </div>              
               </div>
@@ -202,12 +221,11 @@
           <!-- About Us Page -->
           <div id="about" class="tm-page-content">
             <div class="tm-black-bg tm-mb-20 tm-about-box-1">              
-              <h2 class="tm-text-primary tm-about-header">About Wave Cafe</h2>
+              <h2 class="tm-text-primary tm-about-header">About Cafe College</h2>
               <div class="tm-list-item tm-list-item-2">                
-                <img src="img/about-1.png" alt="Image" class="tm-list-item-img tm-list-item-img-big">
+                <img src="img/cafe-college-logo.jpeg" alt="Image" class="tm-list-item-img tm-list-item-img-big">
                 <div class="tm-list-item-text-2">
-                  <p>Wave Cafe is a one-page video background HTML CSS template from Tooplate. You can use this for your business websites.</p>
-                  <p>You can also use this for your client websites which you get paid for your website services. Please tell your friends about us.</p>
+                  <p>Cafe College is one of the most popular cafe  in the town, satiating people’s hunger and cravings and bringing a smile on their faces. And we are proud to say that we have been at it since about 5 years now! we have you covered with delicious items that are absolute value for money.</p>
                 </div>                
               </div>
             </div>
@@ -215,145 +233,52 @@
               <div class="tm-list-item tm-list-item-2">                
                 <div class="tm-list-item-text-2">
                   <h2 class="tm-text-primary">How we began</h2>
-                  <p>If you wish to support us, please contact Tooplate. Thank you. Duis bibendum erat nec ipsum consectetur sodales.</p>                  
+                  <p>When Cafe College first opened, we started with a simple menu of just tea and coffee. And after all these years based on customers requirments we added new menu in our cafe. Customers loves to come here eat and spend there valueable time.</p>
                 </div>                
                 <img src="img/about-2.png" alt="Image" class="tm-list-item-img tm-list-item-img-big tm-img-right">                
               </div>
-              <p>Donec non urna elit. Quisque ut magna in dui mattis iaculis eu finibus metus. Suspendisse vel mi a lacus finibus vehicula vel ut diam. Nam pellentesque, mi quis ullamcorper.</p>
             </div>
           </div>
           <!-- end About Us Page -->
 
-          <!-- Special Items Page -->
-          <div id="special" class="tm-page-content">
-           <div class="tm-special-items">
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Aloo Tikki Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">79</i></h3>
-                  <p class="tm-list-item-description">The World's favourite Indian burger! Crunchy potato and peas patty with delicious Tom Mayo & crunchy onions; now with Whole Wheat Bun.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Spicy Paneer Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">110</i></h3>
-                  <p class="tm-list-item-description">Rich and filling cottage cheese patty coated in spicy, crispy batter topped with a creamy sauce and crispy shredded lettuce will have you craving for more.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Veg Maharaja Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">169</i></h3>
-                  <p class="tm-list-item-description">Enjoy the tallest burgers innovated by us. Created with perfectly fried corn and cheese patty paired along with fresh ingredients like jalapeño, onion, slice of cheese & crunchy lettuce dressed with cocktail sauce.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Chicken Maharaja Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">199</i></h3>
-                  <p class="tm-list-item-description">Enjoy the tallest burgers innovated by us. Created with chunky juicy grilled chicken patty paired along with fresh ingredients like jalapeño, onion, slice of cheese, tomatoes & crunchy lettuce dressed with the classical Habanero sauce.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Grilled Chicken & Cheese Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">129</i></h3>
-                  <p class="tm-list-item-description">Grilled Chicken and Cheese Burger is a burger with grilled chicken patty covered with a slice of cheese, a dollop of spicy habanero sauce, jalapenos and shredded onions. Grilled Chicken and Cheese Burger was formerly known as American Cheese Supreme Chicken.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Creamy Tomato Pasta Pizza<i class="fas fa-solid fa-rupee-sign tm-list-item-price">179</i></h3>
-                  <p class="tm-list-item-description">Loaded with a delicious creamy tomato pasta topping , green capsicum, crunchy red and yellow bell peppers and black olives.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Peppy Paneer Pizza<i class="fas fa-solid fa-rupee-sign tm-list-item-price">189</i></h3>
-                  <p class="tm-list-item-description">Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Tandoori Paneer Pizza<i class="fas fa-solid fa-rupee-sign tm-list-item-price">169</i></h3>
-                  <p class="tm-list-item-description">It is hot. It is spicy. It is oh-so-Indian. Tandoori paneer with capsicum, red paprika & mint mayo.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Pepper Barbecue Chicken<i class="fas fa-solid fa-rupee-sign tm-list-item-price">179</i></h3>
-                  <p class="tm-list-item-description">Pepper barbecue chicken for that extra zing</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-black-bg tm-list-item-text">
-                  <h3 class="tm-list-item-name">Chicken Golden Delight<i class="fas fa-solid fa-rupee-sign tm-list-item-price">210</i></h3>
-                  <p class="tm-list-item-description">Double pepper barbecue chicken, golden corn and extra cheese, true delight.</p>
-                    <i class="fas fa-solid fa-star tm-list-item-price">&nbsp;4.5</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-solid fa-user tm-list-item-price">&nbsp;120</i>
-                </div>
-              </div>
-              </div>                     
-            </div>            
-          </div>
-          <!-- end Special Items Page -->
-
-          <!-- Contact Page 
+          <!-- Contact Page -->
           <div id="contact" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
-              <h2 class="tm-text-primary">Contact Wave</h2>
-              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+              <h2 class="tm-text-primary">Contact Cafe College</h2>
+              <p>Fill free to reach out us on below deatils for any concerns.</p>
             </div>
-            <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form">
+            <div class="tm-black-bg tm-contact-text-container tm-align-right">
                 <div class="tm-form-group">
-                  <input type="text" name="name" class="tm-form-control" placeholder="Name" required="" />
+                  <i class="fas fa-user tm-text-primary tm-page-link-icon"></i>
+                  <span>Amit Jankar</span>
                 </div>
                 <div class="tm-form-group">
-                  <input type="email" name="email" class="tm-form-control" placeholder="Email" required="" />
-                </div>        
-                <div class="tm-form-group tm-mb-30">
-                  <textarea rows="6" name="message" class="tm-form-control" placeholder="Message" required=""></textarea>
-                </div>        
-                <div>
-                  <button type="submit" class="tm-btn-primary tm-align-right">
-                    Submit
-                  </button>
+                  <i class="fas fa-store tm-text-primary tm-page-link-icon"></i>
+                  <span>09 AM To 09 PM</span>
                 </div>
-              </form>
+                <div class="tm-form-group">
+                  <i class="fas tm-text-primary fa-shop-lock tm-page-link-icon"></i>
+                  <span>Closed On Every Sunday</span>
+                </div>
+                <div class="tm-form-group">
+                  <i class="fa-brands fa-whatsapp tm-text-primary tm-page-link-icon"></i>
+                  <span>+91 8149727398</span>
+                </div>
+                <div class="tm-form-group">
+                  <i class="fas fa-location-dot tm-text-primary tm-page-link-icon"></i>
+                  <span>Near Bharti Vidhyapeeth Engg. College, Kolhapur</span>
+                </div>
             </div>
           </div>
-          end Contact Page -->
+          <!-- end Contact Page -->
 
            <!-- Feedback Page -->
            <div id="feedback" class="tm-page-content">
             <div class="tm-black-bg tm-contact-text-container">
-              <h2 class="tm-text-primary">Feedback Wave</h2>
-              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+              <h2 class="tm-text-primary">Feedback Cafe College</h2>
+              <p>How was your experience with <b class="tm-text-primary">Cafe College</b>?</p>
+              <p>We are always happy to get feedback from our valued customers so that we can continue to improve our service.</p>
+              <p>If you could spare two minutes of your time to write a review, we would be really grateful and very happy to read it.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
                 <div class="tm-form-group">
@@ -361,20 +286,16 @@
                 </div>
                 <div class="tm-form-group">
                 <select name="cars" id="feedback-Item" class="tm-form-control tm-black-bg tm-feedback-selec-food" required="">
-                  <option selected style="background-color: #1E5050;">Select Food To Rate</option>
-                  <option value="volvo" style="background-color: #1E5050;">Volvo</option>
-                  <option value="fiat" style="background-color: #1E5050;">Fiat</option>
-                  <option value="audi" style="background-color: #1E5050;">Audi</option>
                 </select>
               </div>
               <div class="tm-form-group">
                 <div class="tm-form-control">
                   <label for="rating">Rate Food 1-5</label>&nbsp;&nbsp;&nbsp;
-                    <span class="fas fa fa-star checked"></span>
-                    <span class="fas fa fa-star checked"></span>
-                    <span class="fas fa fa-star checked"></span>
-                    <span class="fas fa fa-star"></span>
-                    <span class="fas fa fa-star"></span>
+                    <span class="fas fa fa-star star1" id="star1" onmouseover="overStar(event,'1')" onmouseleave="clearStar()" onclick="selectRating(event,'1')"></span>
+                    <span class="fas fa fa-star star2" id="star2" onmouseover="overStar(event,'2')" onmouseleave="clearStar()" onclick="selectRating(event,'2')"></span>
+                    <span class="fas fa fa-star star3" id="star3" onmouseover="overStar(event,'3')" onmouseleave="clearStar()" onclick="selectRating(event,'3')"></span>
+                    <span class="fas fa fa-star star4" id="star4" onmouseover="overStar(event,'4')" onmouseleave="clearStar()" onclick="selectRating(event,'4')"></span>
+                    <span class="fas fa fa-star star5" id="star5" onmouseover="overStar(event,'5')" onmouseleave="clearStar()" onclick="selectRating(event,'5')"></span>
                 </div>
               </div> 
                 <div class="tm-form-group tm-mb-30">
@@ -390,13 +311,110 @@
                 </div>
             </div>
           </div>
-          <!-- end Contact Page -->
+          <!-- end Feedback Page -->
 
+ 
+        <!-- Special Items Page -->
+        <div id="special" class="tm-page-content">
+          <div class="tm-list">
+            <div class="tm-list-item">          
+              <img src="img/alo-tikki.jfif" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Aloo Tikki Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">79</i></h3>
+                <p class="tm-list-item-description">The World's favourite Indian burger! Crunchy potato and peas patty with delicious Tom Mayo & crunchy onions; now with Whole Wheat Bun.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-14"></spam>&nbsp;&nbsp;
+                    <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-14"></spam>
+              </div>
+            </div>
+            <div class="tm-list-item">          
+              <img src="img/SpicyPaneerBurger.jfif" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Spicy Paneer Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">110</i></h3>
+                <p class="tm-list-item-description">Rich and filling cottage cheese patty coated in spicy, crispy batter topped with a creamy sauce and crispy shredded lettuce will have you craving for more.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-15"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-15"></spam>
+              </div>
+            </div>
+            <div class="tm-list-item">          
+              <img src="img/mac-maharaja.jfif" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Veg Maharaja Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">169</i></h3>
+                <p class="tm-list-item-description">Enjoy the tallest burgers innovated by us. Created with perfectly fried corn and cheese patty paired along with fresh ingredients like jalapeño, onion, slice of cheese & crunchy lettuce dressed with cocktail sauce.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-16"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-16"></spam>
+              </div>
+            </div>
+            <div class="tm-list-item">          
+              <img src="img/chicken-mac-maharaja-1.jpg" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Chicken Maharaja Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">199</i></h3>
+                <p class="tm-list-item-description">Enjoy the tallest burgers innovated by us. Created with chunky juicy grilled chicken patty paired along with fresh ingredients like jalapeño, onion, slice of cheese, tomatoes & crunchy lettuce dressed with the classical Habanero sauce.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-17"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-17"></spam>
+              </div>
+            </div> 
+            <div class="tm-list-item">          
+              <img src="img/grilled-chicken-chees.jfif" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Grilled Chicken & Cheese Burger<i class="fas fa-solid fa-rupee-sign tm-list-item-price">129</i></h3>
+                <p class="tm-list-item-description">Grilled Chicken and Cheese Burger is a burger with grilled chicken patty covered with a slice of cheese, a dollop of spicy habanero sauce, jalapenos and shredded onions. Grilled Chicken and Cheese Burger was formerly known as American Cheese Supreme Chicken.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-18"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-18"></spam>
+              </div>
+            </div> 
+            <div class="tm-list-item">          
+              <img src="img/creamy-tomato-pasta4.webp" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Creamy Tomato Pasta Pizza<i class="fas fa-solid fa-rupee-sign tm-list-item-price">179</i></h3>
+                <p class="tm-list-item-description">Loaded with a delicious creamy tomato pasta topping , green capsicum, crunchy red and yellow bell peppers and black olives.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-19"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-19"></spam>
+              </div>
+            </div> 
+            <div class="tm-list-item">          
+              <img src="img/papry-paneer.jfif" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Peppy Paneer Pizza<i class="fas fa-solid fa-rupee-sign tm-list-item-price">189</i></h3>
+                <p class="tm-list-item-description">Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-20"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-20"></spam>
+              </div>
+            </div>
+            <div class="tm-list-item">          
+              <img src="img/tandori-paneer2.PNG" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Tandoori Paneer Pizza<i class="fas fa-solid fa-rupee-sign tm-list-item-price">169</i></h3>
+                <p class="tm-list-item-description">It is hot. It is spicy. It is oh-so-Indian. Tandoori paneer with capsicum, red paprika & mint mayo.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-21"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-21"></spam>
+              </div>
+            </div>
+            <div class="tm-list-item">          
+              <img src="img/Pepper-Barbecue-Chicken.jfif" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Pepper Barbecue Chicken<i class="fas fa-solid fa-rupee-sign tm-list-item-price">179</i></h3>
+                <p class="tm-list-item-description">Pepper barbecue chicken for that extra zing</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-22"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-22"></spam>
+              </div>
+            </div>  
+            <div class="tm-list-item">          
+              <img src="img/Chicken-Golden-Delight.png" alt="Image" class="tm-list-item-img">
+              <div class="tm-black-bg tm-list-item-text">
+                <h3 class="tm-list-item-name">Chicken Golden Delight<i class="fas fa-solid fa-rupee-sign tm-list-item-price">210</i></h3>
+                <p class="tm-list-item-description">Double pepper barbecue chicken, golden corn and extra cheese, true delight.</p>
+                <i class="fas fa-solid fa-star tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-rate-23"></spam>&nbsp;&nbsp;
+                <i class="fas fa-solid fa-user tm-list-item-price"></i>&nbsp;<spam class="tm-list-item-price" id="food-count-23"></spam>
+              </div>                     
+            </div>
+          </div>
+        </div>
+        <!-- end Spcial Page -->
         </main>
       </div>    
     </div>
     <footer class="tm-site-footer">
-      <p class="tm-black-bg tm-footer-text">Copyright 2020 Cafe College
+      <p class="tm-black-bg tm-footer-text">Copyright 2022 Cafe College
       
       | Design: <a href="#" class="tm-footer-link" rel="sponsored" target="_parent">Sourabh & Swapnil</a></p>
     </footer>
@@ -413,22 +431,45 @@
   <script src="js/jquery-3.4.1.min.js"></script>    
   <script>
     var finalRating = 1;
-    $('.final-rating-1').click(function(event) {
-      finalRating=1;
-    });
-    $('.final-rating-2').click(function(event) {
-      finalRating=1;
-    });
-    $('.final-rating-3').click(function(event) {
-      finalRating=1;
-    });
-    $('.final-rating-4').click(function(event) {
-      finalRating=1;
-    });
-    $('.final-rating-5').click(function(event) {
-      finalRating=1;
-    });
+    function overStar(evnt, currentRate){
+      for(var i=1; i<=currentRate;i++){
+        document.getElementById("star"+i).style.color='orange';  
+      }
+    }
 
+    function selectRating(evnt, selectedStar) {
+      clearClassForRating()
+      for(var i=1; i<=selectedStar; i++){
+        document.getElementById("star"+i).classList.add("checked");
+        document.getElementById("star"+i).style.color='orange';
+      }
+      console.log("Selected Rating: "+ selectedStar)
+      finalRating= selectedStar;
+    }
+
+    function clearClassForRating(){
+      console.log('removing class')
+      for(var i=1; i<=5;i++){
+          document.getElementById("star"+i).classList.remove("checked");
+          document.getElementById("star"+i).style.color='white';
+      }
+    }
+
+    function clearStar(){
+      flag=false;
+      for(var i=1; i<=5;i++){
+        isClassCotains=document.getElementById("star"+i).classList.contains("checked")
+        if(isClassCotains){
+          flag=true
+        }
+      }
+      if(!flag){
+          //console.log("not selected only hovered")
+          for(var i=1; i<=5;i++){
+            document.getElementById("star"+i).style.color='white';
+          }
+        }
+    }
 
     function setVideoSize() {
       const vidWidth = 1920;
@@ -482,7 +523,19 @@
       console.log("Fetcing all the fedbacks rating**")
         axios.get('http://localhost:2127/getAllFeedbacks')
         .then(response=>{
-            console.log(response.data)
+          var myResposes= response.data
+          console.log(myResposes)
+          for (var item in myResposes) {
+            document.getElementById("food-rate-"+myResposes[item].id).innerHTML=myResposes[item].totalRating;
+            document.getElementById("food-count-"+myResposes[item].id).innerHTML=myResposes[item].totalFeedbackSubmitted;
+            console.log("Loop Ended")
+            var daySelect = document.getElementById("feedback-Item");
+            var myOption = document.createElement("option");
+            myOption.text = myResposes[item].dishName;
+            myOption.value = myResposes[item].dishName;
+            myOption.style="background-color: #1E5050;"
+            daySelect.add(myOption);
+          }
           })
     }
 
@@ -506,31 +559,18 @@
       /***************** Get Feedback Data  *****************/
 /* */
       $('.tm-feedback-btn').click(function(event) {
+        console.log("Final Rating "+ finalRating);
         console.log(window);
         var feedbackerName = document.getElementById("feedback-name").value;
-        var feedbackRating = document.getElementById("rating").value;
+        //var feedbackRating = document.getElementById("rating").value;
         var feedbackMsg = document.getElementById("feedback-msg").value;
         var feedbackItem = document.getElementById("feedback-Item").value;
         
         if((feedbackerName != null && feedbackerName.trim() != "") && 
             (feedbackMsg != null && feedbackMsg.trim() != "") && 
             (feedbackItem != null)){
-                var tempfeedbackRating=feedbackRating/5;
-                console.log(feedbackRating)
-                if (feedbackRating<=20){
-                  feedbackRating=1;
-                }else if (feedbackRating<=40){
-                  feedbackRating=2;
-                }else if (feedbackRating<=60){
-                  feedbackRating=3;
-                }else if (feedbackRating<=80){
-                  feedbackRating=4;
-                }else{
-                  feedbackRating=5
-                }
-                console.log(feedbackerName.trim(), feedbackRating, feedbackMsg.trim(), feedbackItem);
-                feedBackSubmitRestCall(feedbackerName, feedbackRating, feedbackMsg, feedbackItem)
-                alert("Thank you for your valueable Feedback") 
+              console.log(feedbackerName.trim(), finalRating, feedbackMsg.trim(), feedbackItem);
+              feedBackSubmitRestCall(feedbackerName, finalRating, feedbackMsg, feedbackItem)
         }else{
           //alert("Please add missing values");
           document.getElementById("missingField").innerHTML="*Please Fill All Details";
@@ -551,7 +591,9 @@
                 'Content-Type': 'application/json'
               }
             });
+            getFeedbackForItemsEndCall();
             console.log(res.data);
+            alert("Thank you! '"+res.data.feedbackerName+"' for your valueable Feedback for our '"+ res.data.feedbackItem+"'")      
       }
   
 

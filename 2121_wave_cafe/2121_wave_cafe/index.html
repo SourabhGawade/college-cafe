@@ -521,7 +521,7 @@
     
     function getFeedbackForItemsEndCall(){
       console.log("Fetcing all the fedbacks rating**")
-        axios.get('http://localhost:2127/getAllFeedbacks')
+        axios.get('http://ec2-3-80-74-184.compute-1.amazonaws.com/collegecafe/getAllFeedbacks') //Add pulic url of aws ec2 instance and backend application war file name.
         .then(response=>{
           var myResposes= response.data
           console.log(myResposes)
@@ -586,7 +586,7 @@
                           "feedbackMsg": feedbackMsg,
                           "feedbackItem":feedbackItem
                       });
-           res = await axios.post('http://localhost:2127/submitFeedback', json, {
+           res = await axios.post('http://ec2-3-80-74-184.compute-1.amazonaws.com/collegecafe/submitFeedback', json, {
                headers: {
                 'Content-Type': 'application/json'
               }

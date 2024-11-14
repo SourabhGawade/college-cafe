@@ -1,6 +1,6 @@
 name: Clean up old branches
 
-permission: 
+permissions: 
   contents: write
 
 on:

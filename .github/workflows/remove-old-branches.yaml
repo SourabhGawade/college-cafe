@@ -38,5 +38,5 @@ jobs:
                 fi
                 # Delete the branch
                 echo "Deleting branch: $branch"
-                gh api -X DELETE "repos/$REPO/git/refs/head/$branch"
+                gh api -X DELETE "repos/$REPO/git/refs/heads/$branch"
               done

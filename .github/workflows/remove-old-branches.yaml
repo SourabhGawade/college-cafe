@@ -1,6 +1,7 @@
 name: Clean up old branches
 
-permission: write
+permission: 
+  contents: write
 
 on:
   workflow_dispatch:
@@ -57,5 +58,6 @@ jobs:
         run: |
           # Read the branches from the file
           while IFS= read -r branch; do
-            git push origin --delete "$branch"
+            # git push origin --delete "$branch"
+            echo "Deleting brnch: $branch"
           done < branches_to_delete.txt

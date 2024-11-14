@@ -38,5 +38,10 @@ jobs:
                   continue
                 fi
                 # Delete the branch
-                echo "Deleting branch: $branch"
+                echo "Deleting branch: $branch" > branches-to-deleted.txt
               done
+      - name: Upload branches to delete file
+        uses: actions/upload-artifact@v4
+        with:
+            name: branches-to-delete
+            path: branches_to_delete.txt

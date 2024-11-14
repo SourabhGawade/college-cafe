@@ -1,63 +1,41 @@
-name: Clean up old branches
+# Github workflow to remove branches older than 1 year
+name: Delete Old Branches
 
-permissions: 
+permissions:
   contents: write
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual triggering if needed
 
 jobs:
-  list_old_branches:
+  delete-old-branches:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Check out the repository
         uses: actions/checkout@v4
 
-      - name: List branches older than 1 year
-        id: list_old_branches
+      - name: Install jq and GitHub CLI
         run: |
-          # Exclude specific branches
-          excluded_branches="main master develop qa staging"
-
-          # List branches with no commits in the past year, excluding specified branches
-          branches=$(git for-each-ref --format="%(refname:short)" refs/heads/ |
-            while read branch; do
-              if [[ ! " $excluded_branches " =~ " $branch " ]]; then
-                if [ $(git log -1 --since="1 year ago" --pretty=format:"%h" $branch | wc -l) -eq 0 ]; then
-                  echo $branch
+          sudo apt-get update
+          sudo apt-get install -y jq
+          sudo apt-get install -y gh
+      - name: Delete branches older than 24 months
+        env:
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Get the date 24 months ago in ISO format
+          TWO_YEAR_AGO=$(date -d '24 months ago' +%Y-%m-%dT%H:%M:%SZ)
+          echo "Deleting branches before: $TWO_YEAR_AGO"
+          # Fetch all branches and filter by last commit date
+          gh api -X GET "repos/$REPO/branches" --paginate \
+            | jq -r --arg date "$TWO_YEAR_AGO" '.[] | select(.commit.commit.author.date < $date) | .name' \
+            | while read branch; do
+                # Skip protected branches
+                if [[ "$branch" == "main" || "$branch" == "master" || "$branch" == "develop" || "$branch" == "qa" || "$branch" == "staging" ]]; then
+                  echo "Skipping protected branch: $branch"
+                  continue
                 fi
-              fi
-            done)
-
-          # Save branch list to file
-          echo "$branches" > branches_to_delete.txt
-
-          # Set output for the branches to be deleted
-          echo "::set-output name=branches::$branches"
-
-      - name: Upload branches to delete as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: branches_to_delete
-          path: branches_to_delete.txt
-
-  delete_old_branches:
-    runs-on: ubuntu-latest
-    needs: list_old_branches
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: branches_to_delete
-          path: ./
-
-      - name: Delete old branches
-        run: |
-          # Read the branches from the file
-          while IFS= read -r branch; do
-            # git push origin --delete "$branch"
-            echo "Deleting brnch: $branch"
-          done < branches_to_delete.txt
+                # Delete the branch
+                echo "Deleting branch: $branch"
+              done

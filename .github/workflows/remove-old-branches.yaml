@@ -46,6 +46,17 @@ jobs:
           # Save list to a file
           echo "$BRANCHES_TO_DELETE" > branches_to_delete.txt
           echo "::set-output name=branches::$BRANCHES_TO_DELETE"
+      - name: Delete branches older than 12 months
+        env:
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Read the list of branches to delete
+          BRANCHES_TO_DELETE="${{ steps.prepare.outputs.branches }}"
+          for branch in $BRANCHES_TO_DELETE; do
+            # Delete the branch
+            echo "Deleting branch: $branch"            
+          done          
           
       - name: Upload branches to delete file
         uses: actions/upload-artifact@v4

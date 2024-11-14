@@ -58,7 +58,7 @@ jobs:
         fi
 
     - name: Upload branches to delete as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: branches-to-delete
         path: branches_to_delete.txt

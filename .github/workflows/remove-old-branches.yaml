@@ -1,71 +1,61 @@
-name: Cleanup Branches
+name: Clean up old branches
+
+permission: write
 
 on:
-  workflow_dispatch: # Allows you to trigger this manually
+  workflow_dispatch:
 
 jobs:
-  cleanup_branches:
+  list_old_branches:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Install jq and GitHub CLI
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y jq
-        sudo apt-get install -y gh
+      - name: List branches older than 1 year
+        id: list_old_branches
+        run: |
+          # Exclude specific branches
+          excluded_branches="main master develop qa staging"
 
-    - name: List branches without recent commits
-      env:
-        REPO: ${{ github.repository }}
-        GH_TOKEN: ${{ github.token }}
-      id: list_branches
-      run: |
-        # Set the cutoff date to one year ago
-        cutoff_date=$(date -d '1 year ago' +%Y-%m-%d)
-        
-        # Branches to skip
-        skip_branches=("main" "master" "develop" "qa" "staging")
+          # List branches with no commits in the past year, excluding specified branches
+          branches=$(git for-each-ref --format="%(refname:short)" refs/heads/ |
+            while read branch; do
+              if [[ ! " $excluded_branches " =~ " $branch " ]]; then
+                if [ $(git log -1 --since="1 year ago" --pretty=format:"%h" $branch | wc -l) -eq 0 ]; then
+                  echo $branch
+                fi
+              fi
+            done)
 
-        # Prepare the list of branches to delete
-        branches_to_delete=()
+          # Save branch list to file
+          echo "$branches" > branches_to_delete.txt
 
-        # Get all branches
-        all_branches=$(gh repo view --json refs --jq '.refs[] | select(.isDefault == false) | .name' | sed 's!refs/heads/!!')
+          # Set output for the branches to be deleted
+          echo "::set-output name=branches::$branches"
 
-        for branch in $all_branches; do
-          # Check if the branch is in the skip list
-          if [[ " ${skip_branches[@]} " =~ " ${branch} " ]]; then
-            continue
-          fi
+      - name: Upload branches to delete as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: branches_to_delete
+          path: branches_to_delete.txt
 
-          # Get the last commit date for the branch
-          last_commit_date=$(gh api repos/:owner/:repo/commits?sha=$branch --jq '.[-1].commit.committer.date')
+  delete_old_branches:
+    runs-on: ubuntu-latest
+    needs: list_old_branches
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-          # Compare dates
-          if [[ "$last_commit_date" < "$cutoff_date" ]]; then
-            branches_to_delete+=($branch)
-          fi
-        done
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: branches_to_delete
+          path: ./
 
-        # Output the list to a file
-        if [ ${#branches_to_delete[@]} -gt 0 ]; then
-          printf "%s\n" "${branches_to_delete[@]}" > branches_to_delete.txt
-        else
-          echo "No branches to delete." > branches_to_delete.txt
-        fi
-
-    - name: Upload branches to delete as artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: branches-to-delete
-        path: branches_to_delete.txt
-    
-    # Uncomment the following step if you want to delete the branches automatically
-    # - name: Delete branches
-    #   run: |
-    #     for branch in "${branches_to_delete[@]}"; do
-    #       git branch -D "$branch"
-    #     done
+      - name: Delete old branches
+        run: |
+          # Read the branches from the file
+          while IFS= read -r branch; do
+            git push origin --delete "$branch"
+          done < branches_to_delete.txt
